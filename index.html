@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEAK PATRICK - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* This is the CSS part, it styles the page */
+
+        /* Import a cool font from Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;700&display=swap');
+
+        :root {
+            --background-color: #0f0c29;
+            --glass-color: rgba(255, 255, 255, 0.05);
+            --border-color: rgba(255, 255, 255, 0.2);
+            --text-color: #f0f0f0;
+            --shadow-color: rgba(0, 0, 0, 0.2);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            
+            /* Radial gradient background from your image */
+            background-color: #0d1117; /* A solid dark color fallback */
+            background-image: radial-gradient(circle at center, #302b63, #0f0c29);
+            
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden; /* Hide scrollbars */
+        }
+
+        /* The main container for everything */
+        .portfolio-container {
+            width: 90%;
+            max-width: 400px; /* Max width for larger phone screens */
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Your logo style */
+        .logo {
+            width: 120px;  /* Adjust the size of your logo */
+            height: 120px;
+            border-radius: 50%; /* Makes the logo circular */
+            border: 3px solid var(--border-color);
+            object-fit: cover; /* Ensures the image covers the circle */
+            margin-bottom: 20px;
+        }
+
+        /* === NEW: Style for your name === */
+        .user-name {
+            font-family: 'Teko', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--text-color);
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+            margin-bottom: 40px;
+        }
+
+        /* The container for all the links */
+        .links-grid {
+            display: flex;
+            flex-direction: column; /* Stacks the links vertically for mobile */
+            gap: 20px; /* Space between the glass buttons */
+        }
+
+        /* This is the GLASSY button style */
+        .glass-link {
+            background: var(--glass-color);
+            backdrop-filter: blur(15px); /* This creates the frosted glass effect */
+            -webkit-backdrop-filter: blur(15px); /* For Safari browser support */
+            border: 1px solid var(--border-color);
+            border-radius: 15px; /* Rounded corners */
+            box-shadow: 0 4px 30px var(--shadow-color);
+            
+            padding: 15px 20px;
+            text-decoration: none; /* Removes the underline from links */
+            color: var(--text-color);
+            font-size: 1.2rem;
+            font-weight: 400;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Center the content inside the button */
+            gap: 15px; /* Space between the icon and the text */
+
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .glass-link:hover {
+            background: rgba(255, 255, 255, 0.15); /* Light up on hover */
+            transform: scale(1.03); /* Slightly enlarge on hover */
+        }
+        
+        /* === UPDATED: Base style for all icons === */
+        .glass-link i {
+            font-size: 1.8rem; /* Icon size */
+            width: 35px; 
+            text-align: center; 
+        }
+
+        /* This ensures all text labels are aligned */
+        .glass-link span {
+            width: 100px; 
+            text-align: left;
+        }
+
+        /* === NEW: Gradient and Glow styles for each icon === */
+
+        /* Generic gradient class */
+        .gradient-icon {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        /* YouTube */
+        .youtube-icon {
+            background-image: linear-gradient(45deg, #ff0000, #ff5f5f);
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+        }
+
+        /* Instagram */
+        .instagram-icon {
+            background-image: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
+            text-shadow: 0 0 10px rgba(225, 48, 108, 0.7);
+        }
+
+        /* TikTok */
+        .tiktok-icon {
+            background-image: linear-gradient(45deg, #00f2ea, #ff0050);
+            text-shadow: 0 0 10px rgba(0, 242, 234, 0.7);
+        }
+        
+        /* Telegram */
+        .telegram-icon {
+            background-image: linear-gradient(45deg, #229ED9, #54c2f0);
+            text-shadow: 0 0 10px rgba(34, 158, 217, 0.7);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="portfolio-container">
+        
+        <!-- === 1. YOUR LOGO === -->
+        <!-- The 'src' is now your uploaded image. -->
+        <img src="IMG_20251005_133743_737.jpg" alt="My Logo" class="logo">
+        
+        <!-- === 2. YOUR NAME === -->
+        <h1 class="user-name">PEAK PATRICK</h1>
+
+
+        <div class="links-grid">
+            
+            <!-- === 3. YOUR LINKS === -->
+            <!-- Replace the '#' with your actual social media URLs -->
+
+            <!-- YouTube -->
+            <a href="https://www.youtube.com/@peak_patrick" class="glass-link">
+                <i class="fab fa-youtube gradient-icon youtube-icon"></i>
+                <span>YouTube</span>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/peak_patrickk/" class="glass-link">
+                <i class="fab fa-instagram gradient-icon instagram-icon"></i>
+                <span>Instagram</span>
+            </a>
+
+            <!-- TikTok -->
+            <a href="https://www.tiktok.com/@peak_patrick" class="glass-link">
+                <i class="fab fa-tiktok gradient-icon tiktok-icon"></i>
+                <span>TikTok</span>
+            </a>
+
+            <!-- Telegram -->
+            <a href="https://t.me/peak_patrick" class="glass-link">
+                <i class="fab fa-telegram gradient-icon telegram-icon"></i>
+                <span>Telegram</span>
+            </a>
+
+        </div>
+    </div>
+
+</body>
+</html>
+
